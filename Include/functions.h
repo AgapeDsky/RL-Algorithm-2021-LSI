@@ -77,6 +77,15 @@ float find_q_table_max (float arr[4]);
 int find_q_table_max_idx (float arr[4]);
 
 /**
+ * @brief Function to find submaximum value index from a row on a q table
+ * 
+ * @param arr a single row taken from the q table
+ * @param rank submaximum value rank. highest rank : 0, lowest rank : 3
+ * @return int submaximum index
+ */
+int find_q_table_submax_idx (float arr[4], int rank);
+
+/**
  * @brief Random float number generator [0, 1], equally distributed
  * 
  * @return float Random value

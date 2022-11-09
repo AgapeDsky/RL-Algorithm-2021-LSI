@@ -55,9 +55,9 @@ int main() {
         for (j = 0; j < MAX_SEARCH; j++) {
             // Get next state
             int action = compute_action(cur_state, q_table, epsilon);
-            int next_state = (action == 0) ? cur_state+1 :
+            int next_state = (action == 0) ? cur_state+1    :
                              (action == 1) ? cur_state-SIZE :
-                             (action == 2) ? cur_state-1 :
+                             (action == 2) ? cur_state-1    :
                              (action == 3) ? cur_state+SIZE : -10;
 
             // Next state error condition
@@ -71,10 +71,10 @@ int main() {
             bool valid = (next_state/SIZE >= 0) && (next_state/SIZE < SIZE) && (next_state%SIZE >= 0) && (next_state%SIZE < SIZE);
             while (!valid) {
                 action = compute_action(cur_state, q_table, epsilon);
-                next_state = (action == 0) ? cur_state+1 :
-                             (action == 1) ? cur_state-3 :
-                             (action == 2) ? cur_state-1 :
-                             (action == 3) ? cur_state+3 : -10;
+                next_state = (action == 0) ? cur_state+1    :
+                             (action == 1) ? cur_state-SIZE :
+                             (action == 2) ? cur_state-1    :
+                             (action == 3) ? cur_state+SIZE : -10;
                 valid = (next_state/SIZE >= 0) && (next_state/SIZE < SIZE) && (next_state%SIZE >= 0) && (next_state%SIZE < SIZE);
             }
 
