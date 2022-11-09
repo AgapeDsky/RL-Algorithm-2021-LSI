@@ -2,7 +2,7 @@
 #define PARAM_H
 
 // Maze size
-#define SIZE 3
+#define SIZE 5
 
 // Learning params
 #define alpha 0.5
@@ -11,14 +11,14 @@
 #define REWARD 100.
 
 // Iteration params
-#define EPISODE_THRESHOLD 1000
+#define EPISODE_THRESHOLD 3000
 #define MAX_SEARCH 50
 
 // Starting Point
 #define STARTING_POINT 0
 
 // End goal and demons
-#define count_val 3
+#define count_val 5
 extern int demon_endgoal_loc[count_val];
 
 #endif
