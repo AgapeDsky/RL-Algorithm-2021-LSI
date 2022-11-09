@@ -62,10 +62,10 @@ void print_best_route(float q_table[SIZE*SIZE][4], int starting_point, int end_g
             action = find_q_table_submax_idx(q_table[cur_state], i);
 
             // Check action validity
-            if (action == 0 && cur_col == 4) {}
+            if (action == 0 && cur_col == SIZE-1) {}
             else if (action == 1 && cur_row == 0) {}
             else if (action == 2 && cur_col == 0) {}
-            else if (action == 3 && cur_row == 4) {}
+            else if (action == 3 && cur_row == SIZE-1) {}
             else {
                 valid = 1;
             }
@@ -103,10 +103,10 @@ int compute_action(int cur_state, float q_table[SIZE*SIZE][4], float epsilon) {
         }
         int cur_row = cur_state/SIZE;
         int cur_col = cur_state%SIZE;
-        if (res == 0 && cur_col == 4) {}
+        if (res == 0 && cur_col == SIZE-1) {}
         else if (res == 1 && cur_row == 0) {}
         else if (res == 2 && cur_col == 0) {}
-        else if (res == 3 && cur_row == 4) {}
+        else if (res == 3 && cur_row == SIZE-1) {}
         else {
             valid = 1;
         }
